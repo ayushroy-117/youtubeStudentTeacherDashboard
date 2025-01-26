@@ -1,0 +1,97 @@
+.teacher-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff5722;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  gap: 20px;
+}
+
+.youtube-video {
+  width: 400px;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.youtube-chat {
+  width: 48%; /* Ensures both occupy half the width */
+  height: 400px; /* Fixed height */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-container input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.3);
+}
+
+.youtube-studio-link {
+  display: inline-block;
+  background-color: #ff5722;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.youtube-studio-link:hover {
+  background-color: #e64a19;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(230, 74, 25, 0.3);
+}
+
+.youtube-studio-link:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(230, 74, 25, 0.2);
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+  }
+
+  .youtube-video,
+  .youtube-chat {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,18 @@
+/* Student Page Styles */
+.student-page {
+    text-align: center;
+    padding: 200px;
+  }
+  
+  .video-frame {
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    color: #4CAF50;
+  }
+  

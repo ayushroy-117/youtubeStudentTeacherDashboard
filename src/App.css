@@ -1,38 +1,141 @@
-.App {
+/* Basic Reset */
+.app-homepage * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-homepage body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.app-homepage .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styling */
+.app-homepage .header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  font-size: 36px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navbar Styling */
+.app-homepage .navbar {
+  position: relative;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.app-homepage .toggle-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.app-homepage .nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.app-homepage .nav-links li {
+  margin: 0 15px;
+}
+
+.app-homepage .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.app-homepage .nav-links a:hover {
+  color: #ff5722;
+}
+
+/* Mobile View Navbar */
+@media (max-width: 768px) {
+  .app-homepage .toggle-button {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+
+  .app-homepage .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .app-homepage .navbar.open .nav-links {
+    display: flex;
+  }
+
+  .app-homepage .nav-links li {
+    margin: 10px 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Button Container */
+.app-homepage .button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 80vh;
+}
+
+.app-homepage button {
+  background-color: #4caf50;
+  border: none;
   color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  margin: 15px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.app-homepage button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-homepage button:active {
+  transform: translateY(0);
+}
+
+.app-homepage .student-button-1 {
+  background-color: #2196f3;
+}
+
+.app-homepage .teacher-button-1 {
+  background-color: #ff5722;
+}
+
+.app-homepage .student-button-1:hover {
+  background-color: #1976d2;
+}
+
+.app-homepage .teacher-button-1:hover {
+  background-color: #e64a19;
+}
+
+/* Icon Styling */
+.app-homepage .icon {
+  margin-right: 10px;
 }
